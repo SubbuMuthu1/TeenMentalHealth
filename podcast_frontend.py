@@ -20,7 +20,7 @@ def main():
         podcast_info = available_podcast_info[selected_podcast]
 
         # Right section - Newsletter content
-        st.header("Help roundup content")
+        st.header("Mental Help roundup")
 
         # Display the podcast title
         st.subheader("Episode Title")
@@ -46,11 +46,11 @@ def main():
 
         with col4:
             st.subheader("Podcast Guest Details")
-            st.write(podcast_info["podcast_summary])
+            st.write(podcast_info["podcast_summary"])
 
         # Display the five key moments
         st.subheader("Key Moments")
-        key_moments = podcast_info['podcast_highlights']
+        key_moments = podcast_info["podcast_highlights"]
         for moment in key_moments.split('\n'):
             st.markdown(
                 f"<p style='margin-bottom: 5px;'>{moment}</p>", unsafe_allow_html=True)
