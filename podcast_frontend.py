@@ -118,9 +118,13 @@ def create_dict_from_json_files(folder_path):
     return data_dict
 
 def process_podcast_info(url):
-    f = modal.Function.lookup("corise-podcast-project", "process_podcast")
-    output = f.call(url, '/content/podcast/')
-    return output
+    try:
+        f = modal.Function.lookup("corise-podcast-project", "process_podcast")
+        output = f.call(url, '/content/podcast/')
+        return output
+    except Exception as e:
+        st.error("An error occurred!")
+        st.exception(e)  # Display the full traceback of the exception to the user
 
 if __name__ == '__main__':
     main()
