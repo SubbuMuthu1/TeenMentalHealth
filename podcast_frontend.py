@@ -4,7 +4,7 @@ import json
 import os
 
 def main():
-    st.title("Newsletter Dashboard")
+    st.title("Teen Mental Health")
 
     available_podcast_info = create_dict_from_json_files('.')
 
