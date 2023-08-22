@@ -12,7 +12,7 @@ def main():
     st.sidebar.header("Podcast RSS Feeds")
 
     # Dropdown box
-    st.sidebar.subheader("Available Podcasts Feeds")
+    st.sidebar.subheader("Available Podcasts")
     selected_podcast = st.sidebar.selectbox("Select Podcast", options=available_podcast_info.keys())
 
     if selected_podcast:
@@ -20,7 +20,7 @@ def main():
         podcast_info = available_podcast_info[selected_podcast]
 
         # Right section - Newsletter content
-        st.header("Newsletter Content")
+        st.header("Help roundup content")
 
         # Display the podcast title
         st.subheader("Episode Title")
@@ -60,7 +60,7 @@ def main():
     url = st.sidebar.text_input("Link to RSS Feed")
 
     process_button = st.sidebar.button("Process Podcast Feed")
-    st.sidebar.markdown("**Note**: Podcast processing can take upto 5 mins, please be patient.")
+    st.sidebar.markdown("**Note**: podcast_guest processing can take upto 5 mins, please be patient.")
 
     if process_button:
 
